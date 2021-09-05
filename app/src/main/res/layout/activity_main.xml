@@ -2,6 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    
+    <data>
+        <variable
+            name="bio"
+            type="com.eelok.bio.data.Bio" />
+    </data>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -25,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="@string/name" />
+            android:text="@{bio.name}" />
 
         <EditText
             android:id="@+id/enter_hobbies"
@@ -51,6 +57,7 @@
         <TextView
             android:id="@+id/hobbies_output"
             style="@style/generalStyle"
+            android:text="@{bio.hobbies}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="visible" />
